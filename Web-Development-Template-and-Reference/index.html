@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Page</title>
+  <link rel="icon" href="icon.png">
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- PWA Setup -->
+  <link rel="manifest" href="/manifest.json">
+  <script>
+      if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js')
+              .then(registration => {
+                  console.log('Service Worker registered with scope:', registration.scope);
+              })
+              .catch(error => {
+                  console.error('Service Worker registration failed:', error);
+              });
+          });
+      }
+  </script>
+
+  <!-- Make sure you size everything epecially images so the layout does not break -->
+  <style>
+
+    :root {
+        --primary-color: #FF6347;          /* A vibrant tomato red for primary actions */
+        --secondary-color: #4682B4;        /* A steel blue for secondary elements */
+        --background-color: #F8F9FA;       /* A light gray background for a clean look */
+        --text-color: #212529;             /* Dark gray text for good readability */
+        --font-family: 'Roboto', sans-serif; /* Using font family as Roboto for its modern look */
+        --font-size: 16px;                 /* Base font size */
+        --card-padding: 1rem;              /* Using rem for better scalability */
+    }
+
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a { text-decoration: none; }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    body{ 
+      font-family:var(--font-family); 
+      font-size: var(--font-size);
+      color:var(--text-color);
+      background-color: var(--background-color); 
+    }
+
+    /* Design for Mobile First for faster mobile load times @media for larger screens */
+    /* Typical Device Breakpoints */ /* and (orientation: landscape) */
+    @media only screen and (max-width: 600px) {   }/* Extra small devices (phones, 600px and down) */
+    @media only screen and (min-width: 600px) {   }/* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 768px) {   }/* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 992px) {   }/* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 1200px) {   }/* Extra large devices (laptops/desktops, 1200px and up) */
+
+    .centerContentFlex { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      flex-wrap: wrap; 
+    }
+
+    .container{
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .panel{height: 100vh;}
+
+
+    /* https://flatuicolors.com/
+    https://fonts.google.com/, https://fontjoy.com/, https://www.monotype.com/font-pairing#/playground
+    https://ionic.io/ionicons
+    https://neumorphism.io/#e0e0e0
+    https://hype4.academy/tools/glassmorphism-generator
+    https://www.cssportal.com/css-flexbox-generator/
+    https://grid.layoutit.com/
+    https://www.shapedivider.app/
+    https://bennettfeely.com/clippy/
+    https://animate.style/, https://michalsnik.github.io/aos/ (Animate On Scroll Library), https://useanimations.com/ (Micro-animations)  */
+
+    .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="panel centerContentFlex">
+      <h1>Welcome <span onClick="document.body.classList.toggle('dark-mode');"><ion-icon name="moon"></ion-icon></span></h1> 
+    </div>
+    <div class="panel centerContentFlex">
+      <h1>This is a template</h1> 
+    </div>
+    <div class="panel centerContentFlex">
+      <h1>To make building easier</h1> 
+    </div>
+  </div>
+</body>
+</html>

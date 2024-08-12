@@ -4,10 +4,25 @@
 This guide includes quick refrences to important CSS concepts, generators to speed up development, libraries, and useful links for further reading.
 <br>
 
+# Responsive Design Workflow
+1- Find inspirations on popular sites like Dribble ([Landing Page](https://dribbble.com/search/landing-page), [App Designs](https://dribbble.com/search/app-design))
+
+2- Design a Wireframe/Layout/Mockup for mobile and desktop devices (using pen & paper, or a popular tool like [Figma](https://www.figma.com/")) 
+
+3- Pick a color swatch
+
+4- Pick the fonts
+
+5- Implement the design (using vanilla CSS or a GUI design tool like [Webflow](https://webflow.com/))
+
+6- Add Content
+
+7- Add Animations
+
 # Chrome Dev Tools
 
 - Element Selector
-- CSS Editor
+- CSS Live Editor
 - Device Simulator
 
 # HTML Basic Template
@@ -174,7 +189,7 @@ body { background-color: var(--primary); }
     box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: black;}
 ```
 
 # Colors

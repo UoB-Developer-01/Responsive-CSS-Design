@@ -6,10 +6,246 @@
     <title>Document</title>
     <link rel="icon" href="icon.png">
 
-    <style></style>
+    <style>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+    </style>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+body{ font-family:'Roboto'; }
+
+ion-icon {font-size: 2rem;}
+</style>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+<style>
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  grid-template-rows: 8fr 2fr;
+  grid-template-areas: 
+  "main nav"
+  "footer footer"
+ ;
+
+ color:white;
+
+ justify-items:  center ;
+ align-items:  center ;
+}
+/* .gridContainer div{width: 100% ; height: 100%;} */
+.main {grid-area: main;background-color: red;} .nav {grid-area: nav;background-color: blue;} .footer {grid-area: footer;background-color: green;} 
+
+/* Design for Mobile First for faster mobile load times @media for larger screens */
+
+/* and (orientation: landscape) */
+
+/* Typical Device Breakpoints */ 
+@media only screen and (max-width: 600px) { 
+
+
+body * {color:brown}
+
+  }/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {   }/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 768px) {   }/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {   }/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {   }/* Extra large devices (laptops/desktops, 1200px and up) */
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+
+  height:90vh;
+
+  background-image: url('img/img1.jpg'); background-size: cover; background-position: center;
+}
+
+
+.cards2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+
+  height:100vh;
+
+}
+
+ .card {width: 20vw;height:20vh; background-color: gray;
+    color:white; margin-bottom: 20px;border-radius: 20px;}
+
+    .centerContentFlex { 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-wrap: wrap; 
+}
+
+
+.maincontent{height:100vh; background-color:#3498db ;}
+
+.custom-shape-divider-bottom-1723357717 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1723357717 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 115px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1723357717 .shape-fill {
+    fill: #3498DB;
+}
+
+.glass{
+
+background: rgba( 255, 255, 255, 0.65 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+
+.dark-mode {
+  background-color: black !important;
+  color: white;
+}
+
+</style>
+
 </head>
 <body>
     
+<div div class="cards" style="position:relative">
+
+<div class="card centerContentFlex"  onclick="document.body.classList.toggle('dark-mode');"><ion-icon name="moon"
+    ></ion-icon></div>
+<div class="card centerContentFlex"><ion-icon name="airplane"></ion-icon></div>
+<div class="card centerContentFlex"><ion-icon name="airplane"></ion-icon></div>
+<div class="card centerContentFlex glass"><ion-icon name="airplane"></ion-icon></div>
+<div class="card centerContentFlex glass"><ion-icon name="airplane"></ion-icon></div>
+<div class="card centerContentFlex glass"><ion-icon name="airplane"></ion-icon></div>
+
+
+<div class="custom-shape-divider-bottom-1723357717">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+</div>
+    
+
+    <!-- <p style="position:relative;">i am 1 relative</p> -->
+    <!-- <p style="position:fixed;">i am 3 fixed</p>
+    <p style="position:sticky;">i am 4 sticky</p>
+    <p style="">i am 5 default</p> -->
+
+ <div class="maincontent"  >   
+    <h1 data-aos="fade-left"><ion-icon name="airplane"></ion-icon> Main Heading</h1> 
+    <h2 data-aos="fade-left">Sub Heading</h2> 
+    <h3 data-aos="fade-left">Sub Sub Heading</h3> 
+    <h4 data-aos="fade-left">Heading level 4</h4>
+    <h5 data-aos="fade-left"><ion-icon name="cash-outline"></ion-icon> Heading level 5</h5>
+    
+    <p style=" top:100px;left:100px">i am a pargraph</p>
+
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+
+    <p data-aos="fade-left">Paragraph 1</p>
+    <p data-aos="fade-left">Paragraph 2</p>
+    <p data-aos="fade-left">Paragraph 3</p>
+
+    <img src="img/img3.jpg" data-aos="flip-left"> 
+    <img src="img/img3.jpg" data-aos="flip-left"> 
+    <img src="img/img3.jpg" data-aos="flip-left">
+
+    <a href="https://example.com">Link 1</a> 
+    <a href="https://example.com">Link 2</a> 
+    <a href="https://example.com">Link 3</a> 
+
+    <span>Span 1</span>
+    <span>Span 2</span>
+    <span>Span 3</span>
+
+    <br/> 
+    &nbsp;
+
+</div>
+
+<style>
+.cards2 .card{
+    border-radius: 50px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+
+             margin: 55px;
+
+}
+
+</style>
+
+<div div class="cards2" style="position:relative; background-color: #e0e0e0;">
+
+    <div class="card centerContentFlex"  data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    <div class="card centerContentFlex" data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    <div class="card centerContentFlex" data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    <div class="card centerContentFlex" data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    <div class="card centerContentFlex" data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    <div class="card centerContentFlex" data-aos="fade-left"><ion-icon name="airplane"></ion-icon></div>
+    
+    </div>
+
+    <div id="panel" class="gridContainer" style="height:100vh">
+
+        <div class ="main">Main</div>
+        <div class ="nav">Nav</div>
+        <div class = "footer">Footer</div>
+        
+    </div>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

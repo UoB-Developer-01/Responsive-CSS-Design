@@ -1,8 +1,6 @@
 # CSS Responsive Web Design Principals
 
-
 This guide includes quick refrences to important CSS concepts, generators to speed up development, libraries, and useful links for further reading.
-<br>
 
 # Responsive Design Workflow
 1- Find inspirations on popular sites like Dribble ([Landing Page](https://dribbble.com/search/landing-page), [App Designs](https://dribbble.com/search/app-design))
@@ -118,7 +116,6 @@ display: block; /* Element will be displayed as a block */
 display: inline; /* Element will be displayed inline */
 display: inline-block; /* Element will be displayed as an inline-level block container */
 display: none; /* Element will be hidden */
-display: hidden; /* Element will be hidden */
 display: flex; /* Element will be displayed as a flexible box container */
 display: grid; /* Element will be displayed as a grid container */
 
